@@ -23,6 +23,7 @@ public:
 
 private:
     GLFWwindow* window;
+    ValidationLayers layers;
     VkInstance instance;
 
     void initWindow() {
@@ -48,13 +49,15 @@ private:
      
         vkDestroyInstance(instance, nullptr);
 
+        layers.cleanup(instance);
+
         glfwDestroyWindow(window);
 
         glfwTerminate();
     }
 
     void createInstance() {
-        ValidationLayers layers;
+        
 
         VkApplicationInfo appInfo{};
         appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
@@ -69,11 +72,13 @@ private:
         createInfo.pApplicationInfo = &appInfo;
 
         //layers must be run after createInfo has been created
-        layers.run(createInfo);
+        layers.run(instance, createInfo);
 
         if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS) {
             throw std::runtime_error("failed to create instance!");
         }
+
+        
     }
 };
 
