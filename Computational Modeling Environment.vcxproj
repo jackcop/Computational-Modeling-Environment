@@ -160,7 +160,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="validationLayers.cpp" />
+    <ClCompile Include="ComputationalModelingEnvironment.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="compile.bat" />
@@ -168,7 +168,7 @@
     <None Include="vertex.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="validationLayers.h" />
+    <ClInclude Include="ComputationalModelingEnvironment.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

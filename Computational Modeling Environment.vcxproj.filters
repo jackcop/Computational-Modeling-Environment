@@ -18,7 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="validationLayers.cpp">
+    <ClCompile Include="ComputationalModelingEnvironment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -34,7 +34,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="validationLayers.h">
+    <ClInclude Include="ComputationalModelingEnvironment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
