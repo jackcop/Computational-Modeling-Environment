@@ -1,0 +1,3 @@
+To do:
+
+Make viewport and scissor a dynamic state to reduce time to recreate swapchain.
